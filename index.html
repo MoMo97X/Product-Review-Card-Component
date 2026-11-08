@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Product preview card component</title>
+    <!-- Tailwind Css  -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      :root {
+        /* ### Primary ### */
+        --Green-500: rgb(60, 128, 103);
+        --Green-700: rgb(27, 65, 51);
+        /* ### Neutral ### */
+        --Black: rgb(28, 35, 43);
+        --Grey: rgb(108, 114, 137);
+        --Cream: rgb(242, 235, 227);
+        --White: rgb(255, 255, 255);
+        /* ### Font size,weight ### */
+        --fs-paragraph: 14px;
+        --fw-mont-500: 500;
+        --fw-mont-700: 700;
+        --fw-fran-700: 700;
+      }
+
+      @font-face {
+        font-family: "Fraunces";
+        src: url(fonts/Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+        font-size: normal;
+        font-weight: 700;
+        font-display: swap;
+        font-size-adjust: 0.75;
+      }
+
+      @font-face {
+        font-family: "Montserrat";
+        src: url(fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+        font-size: normal;
+        font-weight: 500 700;
+        font-display: swap;
+        font-size-adjust: 0.75;
+      }
+
+      .attribution {
+        text-align: center;
+        font-size: clamp(0.85rem, 0.25rem + 1.5vw, 1.25rem);
+      }
+      .attribution a {
+        color: var(--Green-700);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-[var(--Cream)] p-3 grid place-content-center">
+    <main
+      class="max-w-[40rem] rounded-[0.75rem] overflow-hidden bg-[var(--White)] lg:grid lg:grid-cols-2"
+    >
+      <picture>
+        <source
+          media="(min-width: 64rem)"
+          srcset="images/image-product-desktop.jpg"
+        />
+        <img
+          class="max-w-full object-cover"
+          src="images/image-product-mobile.jpg"
+          alt="Chanel Perfume"
+        />
+      </picture>
+      <section class="p-4 lg:p-6">
+        <span
+          class="my-5 text-[var(--Grey)] text-xs tracking-[0.5rem] font-[Montserrat] uppercase block"
+        >
+          Perfume
+        </span>
+        <h1 class="mb-4 text-4xl text-[var(--Black)] font-[Fraunces]">
+          Gabrielle Essence Eau De Parfum
+        </h1>
+        <p
+          class="mb-4 text-[var(--Grey)] text-[1rem] font-[Montserrat] font-[var(--fs-mont-500)] leading-[1.5]"
+        >
+          A floral, solar and voluptuous interpretation composed by Olivier
+          Polge, Perfumer-Creator for the House of CHANEL.
+        </p>
+        <div class="pb-2">
+          <span class="font-[Fraunces] text-[var(--Green-500)] text-4xl"
+            >$149.99</span
+          >
+          <del
+            class="text-[var(--Grey)] relative top-[-0.5rem] left-[0.75rem] font-[Montserrat]"
+            >$169.99</del
+          >
+        </div>
+        <button
+          class="w-full my-4 p-3 cursor-pointer border-none outline-none rounded-md bg-[var(--Green-500)] text-[var(--White)] font-[Montserrat] font-[var(--fw-mont-700)] flex justify-center items-center transition duration-300 lineare hover:bg-[var(--Green-700)]"
+        >
+          <img
+            class="mr-4"
+            src="images/icon-cart.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          Add to Cart
+        </button>
+      </section>
+    </main>
+
+    <footer class="attribution text-[var(--Grey)]">
+      Challenge by
+      <a
+        class="text-xl text-[var(----Green-500)] font-[var(--fw-mont-700)]"
+        href="https://www.frontendmentor.io?ref=challenge"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        class="text-xl text-[var(----Green-500)] font-[var(--fw-mont-700)]"
+        href="https://www.frontendmentor.io/profile/MoMo97X"
+        >Muhammed Arrujbani</a
+      >.
+    </footer>
+  </body>
+</html>
